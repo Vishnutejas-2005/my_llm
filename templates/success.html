@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Access Granted{% endblock %}
+{% block content %}
+		<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Success</title>
+		<style>
+			body, html {
+				height: 100%;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #f8f9fa;
+			}
+			.container {
+				text-align: center;
+				background: white;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Success</h1>
+			<p>Your login was successful!</p>
+			<form action="/login" method="get">
+				<p>Product - {{product}}</p>
+				<p>Time window: {{start_date}} to {{end_date}}</p>
+				<p>Filters - {{filters}}</p>
+				<p>Dimensions - {{dimensions}}</p>
+				<p>Metrics - {{metrics}}</p>
+				{% if comments %}
+					<p>Comments - {{comments}}</p>
+				{% endif %}
+				<button type="submit" class="btn btn-primary">Log In Again</button>
+			</form>
+		</div>
+	</body>
+	</html>
+{% endblock %}

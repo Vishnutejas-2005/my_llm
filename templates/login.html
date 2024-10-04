@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Login{% endblock %}
+{% block content %}
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login</title>
+            <style>
+                body, html {
+                    height: 100%;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f8f9fa;
+                }
+                .container {
+                    text-align: center;
+                    background: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    width: 100%; /* Default width */
+                    max-width: 2000px; /* Default max-width */
+                }
+                @media (max-width: 1200px) {
+                    .container {
+                        width: 100%;
+                        max-width: 1200px;
+                    }
+                }
+                @media (max-width: 992px) {
+                    .container {
+                        width: 100%;
+                        max-width: 800px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .container {
+                        width: 100%;
+                        max-width: 600px;
+                    }
+                }
+                @media (max-width: 576px) {
+                    .container {
+                        width: 100%;
+                        max-width: 400px;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>NPCI</h1>
+                {{ render_form(form) }}
+            </div>
+        </body>
+        </html>
+        {% endblock %}
+

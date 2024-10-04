@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Secrets{% endblock %}
+{% block content %}
+<!--Using Boostrap classes for styling here-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .jumbotron {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Welcome</h1>
+			<p>Click the below button for filling the form</p>
+		        <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
